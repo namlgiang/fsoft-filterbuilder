@@ -16,9 +16,8 @@ public class FilterDAOImpl implements FilterDAO{
 
     @Override
     public void addFilter(Filter filter) {
-	Session session = this.sessionFactory.getCurrentSession();
+	Session session = this.sessionFactory.openSession();
 	session.save(filter);
-	
     }
     
 }
